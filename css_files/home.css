@@ -1,0 +1,30 @@
+.nav-bar {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  padding:16px;
+}
+
+.logo {
+  border: 1px solid red;
+  display: flex;
+}
+
+.logo-img {
+  display: flex;
+  align-items: baseline;
+  align-self: center;
+  padding-right: 2px;
+ 
+}
+
+.logo-title > h1 {
+  letter-spacing: 1px;
+}
+
+.nav-list {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+  width: 350px;
+}

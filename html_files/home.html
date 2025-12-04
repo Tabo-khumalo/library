@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css_files/home.css">
   <!-- css reset -->
-   <link rel="stylesheet" href="../">
+   <link rel="stylesheet" href="../css_files/css-reset.css">
   <!-- Poppins - fontFamily -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,18 +18,29 @@
 </head>
 <body>
   <nav class="nav-bar">
-
     <header class="logo">
-      <img src="../icons/book.png" alt="#" width="35">
-      <h1 class="logo-title">StoryStack</h1>
+      <div class="logo-img">
+        <img src="../icons/book.png" alt="#" width="35">
+      </div>
+
+      <div class="logo-title">
+        <h1 class="logo-title">StoryStack</h1>
+      </div>
     </header>
 
     <ul class="nav-list">
       <li class="list-items">Favourites</li>
       <li class="list-items">Notes</li>
       <li class="list-items">Badges</li>
+      <li class="list-items">Settings</li>
     </ul>
   </nav>
+
+  <main>
+    <button class="create-btn">
+      <img src="../icons/Create.png" alt="" width="35">
+    </button>
+  </main>
   
   <script src="../js_files/home.js"></script>
 </body>

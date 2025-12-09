@@ -20,7 +20,7 @@
   <nav class="nav-bar">
     <header class="logo">
       <div class="logo-img">
-        <img src="../icons/book.png" alt="#" width="35">
+        <img src="../icons/book.png" alt="#">
       </div>
 
       <div class="logo-title">
@@ -37,6 +37,23 @@
   </nav>
 
   <main>
+    <form action="#">
+      <Label for="title">Title</Label>
+      <input type="text" id="title" name="title">
+
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author">
+
+      <label for="pages">Pages</label>
+      <input type="number" name="pages" id="pages">
+
+      <label for="read">Read?</label>
+      <div class="checkboxes">
+        <input type="checkbox" name="read" id="read" value="Yes">  Yes
+        <input type="checkbox" name="read" id="read" value="No"> Not Yet 
+      </div>
+      
+    </form>
     <button class="create-btn">
       Create
     </button>

@@ -20,4 +20,5 @@
   body {
     line-height: 1.5; /* Improves readability */
     -webkit-font-smoothing: antialiased; /* Enhances text rendering */
+    font-family: "inter", sans-serif;
   }

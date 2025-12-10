@@ -37,23 +37,42 @@
   </nav>
 
   <main>
+
     <form action="#">
-      <Label for="title">Title</Label>
-      <input type="text" id="title" name="title">
 
-      <label for="author">Author</label>
-      <input type="text" id="author" name="author">
+      <div class="form-group">
+        <Label for="title">Title</Label>
+        <input type="text" id="title" name="title">
+      </div>
 
-      <label for="pages">Pages</label>
-      <input type="number" name="pages" id="pages">
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author">
+      </div>
 
-      <label for="read">Read?</label>
-      <div class="checkboxes">
-        <input type="checkbox" name="read" id="read" value="Yes">  Yes
-        <input type="checkbox" name="read" id="read" value="No"> Not Yet 
+      <div class="form-group">
+        <label for="pages">Pages</label>
+        <input type="number" name="pages" id="pages">
+      </div>
+
+      <div class="form-group">
+        <label for="read">Have you read this book?</label>
+        <div class="checkboxes">
+          <input type="radio" name="reading" id="read" value="Yes">
+           <label for="read">Yes</label>
+          
+          <input type="radio" name="reading" id="not-yet" value="No">
+          <label for="notYet">Not yet</label>
+        </div>
+      </div>
+
+      <div class="form-groups">
+        <input type="button" id="save" name="save" value="Save">
+        <input type="button" id="clear" name="clear" value="Clear">
       </div>
       
     </form>
+    
     <button class="create-btn">
       Create
     </button>

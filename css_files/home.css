@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 body {
   background-color: #F8FAFC;
 }
@@ -60,12 +63,14 @@ body {
   -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
 }
 
-.create-btn:hover {
+.create-btn:hover, 
+input[type="button"]:hover{
   background-color: #C4B5FD;
   color: #1F1F1F;
 }
 
-.create-btn:active {
+.create-btn:active,
+input[type="button"]:active {
   background-color: #c3b5fda9;
   color: #1F1F1F;
   border: 1px solid #6D28D9;
@@ -73,10 +78,62 @@ body {
 }
 
 form {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+  place-self: center;
+  /* height: 100vh; */
+  width: 300px;
+  margin: 75px auto;
+  border-radius: 12px;
+  padding: 24px;
+  background-color: #EDE9FE;
+  box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+}
+
+.form-group {
+  display: grid;
+  text-transform: capitalize;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  outline: none;
+  background-color: #F8FAFC;
+  border: none;
+  padding: 4px 4px;
+}
+
+input[type="radio"] {
+  color: white;
+  accent-color:#6D28D9;
+}
+
+input:active {
+  outline: none;
+  border: #6D28D9;
+}
+
+input[type="button"] {
+  width: 75px;
+  height: 25px;
+  border: none;
+  border-radius: 7px;
+  background-color: #6D28D9;
+  color: #F8FAFC;
+  font: inherit;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-right: 4px;
+  box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+
+}
+
+label {
+  color:#4B5563;
+  letter-spacing: 1px;
 }

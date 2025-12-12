@@ -86,10 +86,14 @@ form {
   margin: 75px auto;
   border-radius: 12px;
   padding: 24px;
-  background-color: #EDE9FE;
+  background-color: #F8FAFC;
   box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
   -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
   -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  border: 1px solid red;
+  position: fixed;
+  top: 10%;
+  z-index: 1;
 }
 
 .form-group {
@@ -101,7 +105,8 @@ input[type="text"],
 input[type="number"] {
   width: 100%;
   outline: none;
-  background-color: #F8FAFC;
+  background-color: #C4B5FD;
+  color: #1F1F1F;
   border: none;
   padding: 4px 4px;
 }
@@ -137,3 +142,35 @@ label {
   color:#4B5563;
   letter-spacing: 1px;
 }
+
+.blur-overlay {
+  border: 1px solid red;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* filter: blur(5px); */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  border: 1px solid red;
+  width: 200px;
+  height: 250px;
+  text-align: center;
+  font: inherit;
+  font-style: inherit;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #F8FAFC;
+  box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+}
+
+
+

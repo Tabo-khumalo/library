@@ -1,16 +1,26 @@
+
+.create-btn,
+.card,
+form,
+input[type="button"] {
+  box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+}
+
 .hidden {
   display: none;
 }
+
 body {
-  background-color: #F8FAFC;
+  background-color: var(--background-color);
 }
 
 .nav-bar {
-  border: 1px solid black;
   display: flex;
   justify-content: space-between;
   padding:16px;
-  background-color: #6D28D9;
+  background-color: var(--primary-color);
 }
 
 .logo {
@@ -26,9 +36,9 @@ body {
 }
 
 .logo-title > h1 {
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-spacing);
   font-family: "poppins";
-  color: #F8FAFC;
+  color: var(--background-color);
 }
 
 .nav-list {
@@ -38,10 +48,10 @@ body {
   font-size: 18px;
   font-weight: 400;
   font-family: "poppins";
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-spacing);
   justify-content: space-around;
   width: 350px;
-  color: #F8FAFC;
+  color: var(--background-color);
 }
 
 .create-btn {
@@ -54,26 +64,23 @@ body {
   border: none;
   cursor: pointer;
   font-weight: 400;
-  letter-spacing: 1px;
-  background-color: #6D28D9;
-  color: white;
+  letter-spacing: var(--letter-spacing);
+  background-color: var(--primary-color);
+  color: var(--background-color);
   cursor: pointer;
-  box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-  -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-  -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
 }
 
 .create-btn:hover, 
 input[type="button"]:hover{
-  background-color: #C4B5FD;
-  color: #1F1F1F;
+  background-color: var(--secondary-color);
+  color: var(--Primary-text);
 }
 
 .create-btn:active,
 input[type="button"]:active {
-  background-color: #c3b5fda9;
-  color: #1F1F1F;
-  border: 1px solid #6D28D9;
+  background-color: var(--button-clicked);
+  color: var(--Primary-text);
+  border: 1px solid var(--primary-color);
   /* transition: 2s; */
 }
 
@@ -84,12 +91,9 @@ form {
   /* height: 100vh; */
   width: 300px;
   margin: 75px auto;
-  border-radius: 12px;
+  border-radius: var(--card-border-radius);
   padding: 24px;
-  background-color: #F8FAFC;
-  box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-  -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-  -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  background-color: var(--background-color);
   position: fixed;
   top: 10%;
   z-index: 1;
@@ -104,20 +108,19 @@ input[type="text"],
 input[type="number"] {
   width: 100%;
   outline: none;
-  background-color: #C4B5FD;
-  color: #1F1F1F;
+  background-color: var(--secondary-color);
+  color: var(--Primary-text);
   border: none;
   padding: 4px 4px;
 }
 
 input[type="radio"] {
-  color: white;
-  accent-color:#6D28D9;
+  accent-color: var(--primary-color);
 }
 
 input:active {
   outline: none;
-  border: #6D28D9;
+  border: var(--primary-color);
 }
 
 input[type="button"] {
@@ -125,21 +128,17 @@ input[type="button"] {
   height: 25px;
   border: none;
   border-radius: 7px;
-  background-color: #6D28D9;
-  color: #F8FAFC;
+  background-color: var(--primary-color);
+  color: var(--background-color);
   font: inherit;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: var(--letter-spacing);
   margin-right: 4px;
-  box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-  -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-  -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-
 }
 
 label {
-  color:#4B5563;
-  letter-spacing: 1px;
+  color:var(--secondary-text);
+  letter-spacing: var(--letter-spacing);
 }
 
 .blur-overlay {
@@ -172,11 +171,8 @@ label {
   font: inherit;
   font-style: inherit;
   padding: 16px;
-  border-radius: 12px;
-  background-color: #F8FAFC;
-  box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-  -webkit-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
-  -moz-box-shadow: 0px 0px 18px 0px rgba(196,181,253,0.75);
+  border-radius: var(--card-border-radius);
+  background-color: var(--background-color);
 }
 
 

@@ -40,8 +40,10 @@
 
   <main>
 
-    <div class="blur-overlay">
+    <div class="overlay">
       <div class="card-container">
+        <!-- new book cards will be installed by js here -->
+
         <div class="card">
 
           <div class="title">
@@ -140,7 +142,7 @@
       </div>
     </div>
 
-    <form action="#" class="hidden">
+    <form action="#" class="hidden" id="bookForm">
 
       <div class="form-group">
         <Label for="title">Title</Label>
@@ -169,14 +171,15 @@
       </div>
 
       <div class="form-groups">
-        <input type="button" id="save" name="save" value="Save">
-        <input type="button" id="clear" name="clear" value="Clear">
+        <!-- this button will trigger the JS logic -->
+        <button type="submit" class="submit-btn" id="save">Save</button>
+        <button class="cancel-btn">Cancel</button>
       </div>
       
     </form>
     
     <button class="create-btn">
-      Create
+      New book
     </button>
   </main>
   

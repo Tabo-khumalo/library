@@ -193,14 +193,19 @@ label {
   font-weight: 400;
   color: white;
   border: none;
-  /* border-radius: var(--card-border-radius); */
+  border-radius: 7px;
   letter-spacing: var(--letter-spacing);
 }
 
-
-.read {
-  border: 1px solid red;
-  border-radius: 7px;
+.removeBtn:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: var(--Primary-text);
 }
+
+.removeBtn:active {
+  background-color: rgb(143, 17, 17);
+  color: white;
+}
+
 
 

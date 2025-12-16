@@ -6,7 +6,7 @@ const cancelBtn = document.querySelector(".cancel-btn");
 const titleInput = document.querySelector("#title");
 const authorInput = document.querySelector("#author");
 const pagesInput = document.querySelector("#pages");
-const readInput = document.querySelector("#read");
+const readInput = document.querySelector("#read").checked;
 const notReadInput = document.querySelector("#not-yet");
 const bookForm = document.querySelector("#bookForm");
 const cardContainer = document.querySelector(".card-container");
@@ -47,18 +47,22 @@ function removeBook(id) {
 }
 
 function displayBooks() {
+
+  cardContainer.innerHTML = "";
+
   myLibrary.forEach((book) => {
 
     // card container
     const card = document.createElement("div")
     card.classList.add("card");
+    card.setAttribute('data-id', book.id);
 
     // title div and title
     const titleContainer = document.createElement("div");
     titleContainer.classList.add("title");
 
     const title = document.createElement("h4");
-    title.textContent = book.title;
+    title.textContent =`Title: ${book.title}` ;
 
     card.appendChild(titleContainer);
     titleContainer.append(title);
@@ -68,7 +72,7 @@ function displayBooks() {
     authorContainer.classList.add("author");
 
     const author = document.createElement("p")
-    author.textContent = book.author;
+    author.textContent = `Author: ${book.author}`;
 
     card.appendChild(authorContainer);
     authorContainer.appendChild(author);
@@ -79,24 +83,36 @@ function displayBooks() {
     pagesContainer.classList.add("pages");
 
     const pages = document.createElement("p")
-    pages.textContent = book.pages;
+    pages.textContent = `Pages: ${book.pages}`;
 
     card.appendChild(pagesContainer);
     pagesContainer.appendChild(pages)
 
+    // check if book is 
+    const readStatusContainer = document.createElement("div");
+    readStatusContainer.classList.add("readStatuses");
+
+    const readStatus = document.createElement("p");
+    readStatus.textContent = `Read: ${book.read ? "Yes" : "No"}`;
+
+    card.appendChild(readStatusContainer);
+    readStatusContainer.appendChild(readStatus);
+   
     // remove btn container and remove btn
 
     const removeBtnContainer = document.createElement("button");
     removeBtnContainer.classList.add("removeBtnCont");
 
     const removeBtn = document.createElement("button")
-    removeBtn.innerText = "remove";
+    removeBtn.innerText = "Remove";
     removeBtn.classList.add("removeBtn");
 
     card.appendChild(removeBtnContainer);
     removeBtnContainer.appendChild(removeBtn)
 
-    removeBtn.addEventListener('click', removeBook(book.id));
+    removeBtn.addEventListener('click', () => {
+      removeBook(book.id);
+    });
 
     // card container
 
@@ -122,7 +138,7 @@ createBtn.addEventListener('click', (e) => {
 saveBtn.addEventListener('click', (e) => {
   addClass(createForm, "hidden");
   removeBlur(blurFilter, "blur-overlay");
-  addBookToLibrary(title.value, author.value, pages.value);
+  addBookToLibrary(title.value, author.value, pages.value, read.checked);
   console.log(title.value);
   clearForm();
 })
@@ -142,6 +158,7 @@ function Book(title, author, pages, read){
   this.read = read,
   this.id = crypto.randomUUID();
 }
+
 
 displayBooks()
 

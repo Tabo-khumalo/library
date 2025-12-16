@@ -180,5 +180,27 @@ label {
   background-color: var(--background-color);
 }
 
+.removeBtnCont {
+  border: none;
+  background-color: var(--background-color);
+  margin-top: 48px;
+}
+
+.removeBtn {
+  background-color: red;
+  width: 80%;
+  font-family: inherit;
+  font-weight: 400;
+  color: white;
+  border: none;
+  /* border-radius: var(--card-border-radius); */
+  letter-spacing: var(--letter-spacing);
+}
+
+
+.read {
+  border: 1px solid red;
+  border-radius: 7px;
+}
 
 
